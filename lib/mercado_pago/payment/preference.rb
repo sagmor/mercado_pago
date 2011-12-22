@@ -34,6 +34,10 @@ module MercadoPago
         end
       end
 
+      def item=(item)
+        self.items = [item]
+      end
+
       def items=(items)
         self[:items] = (items || []).map{ |i| Item.new(i) }
       end
@@ -89,7 +93,7 @@ module MercadoPago
 
       protected
         def create
-          self.attributes = API.post("/checkout/preferences", {
+          response = API.post("/checkout/preferences", {
             :body => to_json,
             :query => {
               :access_token => client.access_token
@@ -98,7 +102,10 @@ module MercadoPago
               "content-type" => "application/json"
             }
           })
+          self.attributes = response
           true
+        rescue
+          raise response.inspect
         end
 
         def update
