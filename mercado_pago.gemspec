@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = MercadoPago::VERSION
   s.author      = "Sebastian Gamboa"
   s.email       = "me@sagmor.com"
-  s.homepage    = ""
+  s.homepage    = "https://github.com/sagmor/mercado_pago"
   s.summary     = %q{Mercado Pago}
   s.description = %q{Mercado Pago}
 
