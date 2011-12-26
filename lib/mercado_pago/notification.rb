@@ -1,5 +1,5 @@
 module MercadoPago
-  class Notification < Hashie::Clash
+  class Notification < Hashie::Mash
     attr_accessor :client
 
     def self.find(client, id)
