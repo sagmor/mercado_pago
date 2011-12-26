@@ -15,6 +15,10 @@ module MercadoPago
       notification.client = client
       notification
     end
+
+    def approved?
+      status == "approved"
+    end
   end
 
   class NotificationNotFoundError < RuntimeError; end
