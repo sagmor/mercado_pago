@@ -9,9 +9,13 @@ module MercadoPago
         }
       })
 
+      raise NotificationNotFoundError unless response["collection"]
+
       notification = self.new(response["collection"])
       notification.client = client
       notification
     end
   end
+
+  class NotificationNotFoundError < RuntimeError; end
 end
