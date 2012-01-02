@@ -16,7 +16,7 @@ module MercadoPago
       end
 
       def notification(params)
-        Notificaton.new(params)
+        Notification.new(params)
       end
     end
   end
