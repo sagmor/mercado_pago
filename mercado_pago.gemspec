@@ -23,4 +23,5 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency "hashie"
   s.add_runtime_dependency "httparty"
   s.add_runtime_dependency "multi_json"
+  s.add_runtime_dependency "rest-client"
 end
