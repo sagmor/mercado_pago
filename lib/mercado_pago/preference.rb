@@ -1,7 +1,7 @@
 module MercadoPago
   class Preference < Hashie::Dash
     attr_accessor :client
-    
+
     # Configurables
     property :collector_id
     property :external_reference
@@ -103,8 +103,8 @@ module MercadoPago
         })
         self.attributes = response
         true
-      rescue
-        raise response.inspect
+      # rescue
+        # raise response.inspect
       end
 
       def update
