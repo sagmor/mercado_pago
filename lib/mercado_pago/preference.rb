@@ -23,6 +23,7 @@ module MercadoPago
     property :payer
     property :marketplace_fee
     property :client_id
+    property :marketplace
 
     def initialize(attributes)
       self.attributes = attributes
