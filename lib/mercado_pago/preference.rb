@@ -22,6 +22,7 @@ module MercadoPago
     property :expiration_date_from
     property :payer
     property :marketplace_fee
+    property :client_id
 
     def initialize(attributes)
       self.attributes = attributes
