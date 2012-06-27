@@ -32,7 +32,7 @@ module MercadoPago
 
     def attributes=(attributes)
       attributes.each do |key,value|
-        self.send "#{key}=", value
+        self.send "#{key}=", value rescue nil # in case they add new attributes to the result
       end
     end
 
@@ -106,8 +106,6 @@ module MercadoPago
         })
         self.attributes = response
         true
-      # rescue
-        # raise response.inspect
       end
 
       def update
